@@ -1,12 +1,12 @@
-'use client';
+"use client";
 
-import {Auth} from '@/components/auth';
-import {Background} from '@/components/background';
-import {Footer} from '@/components/footer';
-import {Modal} from '@/components/modal';
-import {Table} from '@/components/table';
-import {initSatellite} from '@junobuild/core';
-import {useEffect} from 'react';
+import { Auth } from "@/components/auth";
+import { Background } from "@/components/background";
+import { Footer } from "@/components/footer";
+import { Modal } from "@/components/modal";
+import { Table } from "@/components/table";
+import { initSatellite } from "@junobuild/core";
+import { useEffect } from "react";
 
 export default function Home() {
   useEffect(() => {
@@ -14,8 +14,8 @@ export default function Home() {
     (async () =>
       await initSatellite({
         workers: {
-          auth: true
-        }
+          auth: true,
+        },
       }))();
   }, []);
 
@@ -27,12 +27,13 @@ export default function Home() {
             Example App
           </h1>
           <p className="dark:text-white py-4 md:max-w-lg">
-            Explore this demo app built with Next.js, Tailwind, and{' '}
+            Explore this demo app built with Next.js, Tailwind, and{" "}
             <a
               href="https://juno.build"
               rel="noopener noreferrer"
               target="_blank"
-              className="underline">
+              className="underline"
+            >
               Juno
             </a>
             , showcasing a practical application of these technologies.
