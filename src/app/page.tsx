@@ -1,7 +1,6 @@
 "use client";
 
 import { Auth } from "@/components/auth";
-import { Background } from "@/components/background";
 import { Footer } from "@/components/footer";
 import { Modal } from "@/components/modal";
 import { Table } from "@/components/table";
@@ -20,36 +19,24 @@ export default function Home() {
   }, []);
 
   return (
-    <>
-      <div className="relative isolate min-h-[100dvh]">
-        <main className="mx-auto max-w-(--breakpoint-2xl) py-16 px-8 md:px-24 [@media(min-height:800px)]:min-h-[calc(100dvh-128px)]">
-          <h1 className="dark:text-white text-5xl md:text-6xl font-bold tracking-tight md:pt-24">
-            Example App
+    <div className="flex flex-col min-h-screen bg-gray-50 dark:bg-gray-900">
+      <main className="flex-1 flex flex-col items-center justify-center p-6">
+        <div className="text-center max-w-md mx-auto">
+          <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            IC Drive
           </h1>
-          <p className="dark:text-white py-4 md:max-w-lg">
-            Explore this demo app built with Next.js, Tailwind, and{" "}
-            <a
-              href="https://juno.build"
-              rel="noopener noreferrer"
-              target="_blank"
-              className="underline"
-            >
-              Juno
-            </a>
-            , showcasing a practical application of these technologies.
+          <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
+            Secure file storage on the blockchain
           </p>
 
           <Auth>
             <Table />
-
             <Modal />
           </Auth>
-        </main>
+        </div>
+      </main>
 
-        <Footer />
-
-        <Background />
-      </div>
-    </>
+      <Footer />
+    </div>
   );
 }
